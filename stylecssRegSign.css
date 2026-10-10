@@ -1,0 +1,137 @@
+body{
+    background-color:black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(background.PNG);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+}
+.circle{
+    justify-content:center;
+    align-items:center;
+    border:3px solid black;
+    border-radius: 70px;
+    background-color:white;
+    width:400px;
+    height:300px;
+    display: flex;
+    flex-direction:column;
+    position:relative;
+    perspective: 1000px;
+    transform-style:preserve-3d;
+    transition: transform 1.5s;
+}
+#RegWindow,#SignInWindow{
+    display: flex;
+    flex-direction:column;
+    gap:15px;
+    position:absolute;
+    top:110px;
+    left:190px;
+    transform: translate(-50%,-50%);
+    backface-visibility: hidden;
+    align-items:center;
+    
+}
+#RegWindow{
+    transform: rotateY(180deg) translate(20%,-50%);
+   
+}
+.circle h1{
+    margin: 20px;
+    padding:20px;
+    text-decoration:underline;
+    font-size:35px;
+}
+.circle input{
+    border:2px black solid;
+    border-radius:25px;
+    box-sizing:border-box;
+    width:225px;
+    height:19px;
+}
+.circle button{
+    background-color:green;
+    font-size:15px;
+    border:black 1px solid;
+    border-radius:20px;
+    box-sizing: border-box;
+    width:120px;
+    height:25px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.circle button:hover{
+    opacity: 0.8;
+    cursor:pointer;
+    color:Gold;
+}
+#ButtonToSignIn,#ButtonToReg{
+    border:none;
+    background-color:white;
+    color:blue;
+}
+#ButtonToSignIn:hover,#ButtonToReg:hover{
+    cursor:pointer;
+    color:rgb(48, 48, 152);
+}
+.circle.slipp{
+    transform:rotateY(180deg);
+}
+#RegWindow{
+    left:121px;
+    display:flex;
+   
+}
+#SignInMaessage{
+    border:black 2px solid;
+    background-color:white;
+    border-radius:20%;
+    z-index:100;
+    opacity:0.9;
+    inset:0;
+    display:none;
+    width:350px;
+    height:200px;
+
+}
+#SignInMaessage.true{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+#WindowSignInTrueButton{
+    width:80px;
+    
+}
+#SignInMaessageFalse{
+    border:black 2px solid;
+    background-color:white;
+    border-radius:20%;
+    z-index: 100;
+    opacity:0.9;
+    inset:0;
+    width:365px;
+    height:200px;
+    display: none;
+}
+#SignInMaessageFalse.true{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#SignInMaessageFalse button{
+    background-color:red;
+    width:80px;
+}
+
+
+
+
